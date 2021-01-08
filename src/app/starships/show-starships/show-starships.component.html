@@ -1,0 +1,28 @@
+<table class="table table-striped">
+	<thead class="bg-secondary">
+	<tr class="table-first-row">
+		<th>№</th>
+		<th>Name:</th>
+		<th>Model:</th>
+		<th>Starship class:</th>
+		<th>Max speed:</th>
+		<th>Length:</th>
+		<th>Crew:</th>
+		<th>Passengers:</th>
+		<th>Credits cost:</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr *ngFor="let currentStarship of StarshipsList.results; index as number" class="shadow-on-hover">
+		<td class="font-weight-bolder">{{number + 1}}</td>
+		<td>{{currentStarship.name}}</td>
+		<td>{{currentStarship.model}}</td>
+		<td class="text-capitalize">{{currentStarship.starship_class}}</td>
+		<td>{{currentStarship.max_atmosphering_speed}}</td>
+		<td>{{currentStarship.length}}</td>
+		<td>{{currentStarship.crew}}</td>
+		<td>{{currentStarship.passengers}}</td>
+		<td>{{currentStarship.cost_in_credits}}</td>
+	</tr>
+	</tbody>
+</table>

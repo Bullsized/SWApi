@@ -1,0 +1,16 @@
+body {
+    cursor: url(/assets/cursors/altlink.cur), auto;
+}
+
+button:hover {
+    cursor: url(/assets/cursors/normal.cur), auto;
+}
+
+.table-first-row th {
+    color: white;
+    font-size: 20px;
+}
+
+.shadow-on-hover:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}

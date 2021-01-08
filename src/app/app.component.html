@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-light d-block text-center mb-4">
+	<button class="navbar-brand px-4" routerLink="vehicles">
+		<img src="../assets/images/vehicle_navbar.png" width="30" height="30"
+			 class="d-inline-block align-top mr-2"
+			 alt="vehicles-button"
+			 loading="lazy">
+		Vehicles
+	</button>
+	<button class="navbar-brand px-4" routerLink="starships">
+		<img src="../assets/images/starship_navbar.png" width="30" height="30"
+			 class="d-inline-block align-top mr-2"
+			 alt="starships-button"
+			 loading="lazy">
+		Starships
+	</button>
+</nav>
+
+<div class="jumbotron jumbotron-fluid d-none" id="swapi-is-down">
+	<div class="container">
+		<h1 class="display-4">Hmmm...</h1>
+		<p class="lead">https://swapi.dev/ seems to be down at the moment ~</p>
+	</div>
+</div>
+
+<router-outlet></router-outlet>
