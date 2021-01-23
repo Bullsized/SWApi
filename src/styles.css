@@ -1,16 +1,16 @@
 body {
-    cursor: url(/assets/cursors/altlink.cur), auto;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
 }
 
-button:hover {
-    cursor: url(/assets/cursors/normal.cur), auto;
-}
-
-.table-first-row th {
-    color: white;
-    font-size: 20px;
-}
-
-.shadow-on-hover:hover {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-}
+.color-1, .nav-item a, #usage-row h2, #usage-row p { color: #ECF0E9 !important; }
+.color-2 { color: #247FC8; }
+.color-3 { color: #38BBF3; }
+.color-4 { color: #34548B; }
+.color-5 { color: #1A2955; }
+.bg-color-1 { background-color: #ECF0E9; }
+.bg-color-2 { background-color: #247FC8; }
+.bg-color-3 { background-color: #38BBF3; }
+.bg-color-4 { background-color: #34548B; }
+.bg-color-5 { background-color: #1A2955; }
+.h-200 { height: 200px; }

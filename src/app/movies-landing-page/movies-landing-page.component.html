@@ -1,0 +1,95 @@
+<nav id="navbar-scrollspy" class="navbar navbar-light bg-color-4 fixed-top">
+	<a class="navbar-brand color-1" href="#">Star Wars Movies</a>
+	<ul class="nav nav-pills">
+		<li class="nav-item pl-sm-0">
+			<a class="nav-link" href="#intro-row">Introduction</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#cards-row">Movies</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#usage-row">Usage</a>
+		</li>
+	</ul>
+</nav>
+
+<div data-spy="scroll" data-target="#navbar-scrollspy" data-offset="0">
+	<div id="intro-row" class="row py-5 mt-5 bg-color-1">
+		<div class="offset-md-1 col-md-5 col-sm-12">
+			<h1>List of Star Wars Movies</h1>
+			<p class="text-justify">The Star Wars franchise has spawned multiple live-action and animated films. The
+				franchise started with a film trilogy set in medias res—beginning in the middle of the story—which was
+				later expanded to a trilogy of trilogies, better known as the "Skywalker saga". The original trilogy was
+				released between 1977 and 1983, the prequel trilogy between 1999 and 2005, and a sequel trilogy between
+				2015 and 2019. The original eponymous film, later subtitled Episode IV – A New Hope, was followed by the
+				sequels Episode V – The Empire Strikes Back (1980) and Episode VI – Return of the Jedi (1983), forming
+				what is collectively referred to as the original trilogy. Years later, a prequel trilogy was released,
+				consisting of Episode I – The Phantom Menace (1999), Episode II – Attack of the Clones (2002), and
+				Episode III – Revenge of the Sith (2005).</p>
+		</div>
+		<div class="col-md-5 col-sm-12">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item"
+						src="https://player.vimeo.com/video/3013544"
+						allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+	<div id="cards-row" class="row py-5 bg-color-5 color-1">
+		<div class="offset-md-1 col-md-10">
+			<div class="row">
+				<div class="col-md-4 col-sm-12"
+					 *ngFor="let currentMovie of moviesList.results; let i = index;"
+					 [ngClass]="{'mt-md-3': (i > 2)}">
+					<app-movies-card [movie]="currentMovie"></app-movies-card>
+				</div>
+
+				<h2 *ngIf="showError">
+					<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+						 class="bi bi-bug-fill color-1" viewBox="0 0 16 16" fill="currentColor">
+						<path d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A4.985 4.985 0 0 0 3 6h10a4.985 4.985 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A4.978 4.978 0 0 0 8 1a4.979 4.979 0 0 0-2.731.811l-.29-.956z"/>
+						<path d="M13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5H13zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975z"/>
+					</svg>
+					Whoops, there seems to be an error with the Star Wars API at the moment. Please try again later.
+				</h2>
+			</div>
+		</div>
+	</div>
+
+	<div id="usage-row" class="row pt-5 pb-4 bg-dark">
+		<div class="col-md-2 offset-md-1 bg-color-1 h-200 pl-1">ECF0E9</div>
+		<div class="col-md-2 bg-color-2 pl-1">247FC8</div>
+		<div class="col-md-2 bg-color-3 pl-1">38BBF3</div>
+		<div class="col-md-2 bg-color-4 pl-1">34548B</div>
+		<div class="col-md-2 bg-color-5 color-1 pl-1">1A2955</div>
+		<div class="offset-sm-1 col-sm-10 offset-md-1 col-md-10">
+			<h2 class="mt-5">Palette used in the project</h2>
+			<p>The palette consists of a light color, a dark color, main brand color and two highlight colors. The main
+				color is in the center of the palette and has the largest impact on the overall look.
+				<a href="http://colormind.io/bootstrap/" target="_blank">I do believe good ideas are worth sharing.</a>
+			</p>
+			<h2 class="mt-4">Font used in the project</h2>
+			<p><b>Oswald</b> - designed by Vernon Adams, Kalapi Gajjar, Cyreal.
+				<a href="https://fonts.google.com/specimen/Oswald?vfonly=true&sidebar.open=true&selection.family=Oswald"
+				   target="_blank">Get
+					it from here.</a>
+			</p>
+			<h2 class="mt-4">Built with/on</h2>
+			<p>Angular CLI: 11.0.6; Node: 12.14.0; Bootstrap 4.5; WebStorm 2019.1; Google Chrome 87.0.4280.141; Windows
+				10 x64;
+				<a href="https://github.com/Bullsized/SWApi" target="_blank">GitHub Repository.</a>
+			</p>
+			<h2 class="mt-4">API provided by</h2>
+			<p>The Star Wars API. <a href="https://swapi.dev/" target="_blank">Check them out.</a></p>
+		</div>
+	</div>
+
+	<footer class="color-1 bg-color-5">
+		<div class="text-center py-3">
+			© 2021 Prepared by:
+			<a href="https://www.linkedin.com/in/ivan-stefanov-11a843150/" target="_blank">Ivan Stefanov</a>
+		</div>
+	</footer>
+</div>

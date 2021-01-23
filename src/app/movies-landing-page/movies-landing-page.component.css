@@ -1,0 +1,18 @@
+#intro-row, #cards-row, #info-row, #usage-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    #navbar-scrollspy > ul > li.nav-item.pl-sm-0 > a {
+        padding-left: 0;
+    }
+
+    #cards-row .col-sm-12 + .col-sm-12 {
+        margin-top: 1.5rem;
+    }
+
+    #usage-row .col-md-2 {
+        height: 25px;
+    }
+}

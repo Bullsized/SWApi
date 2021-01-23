@@ -11,11 +11,7 @@ export class SwApiService {
     constructor(private http: HttpClient) {
     }
 
-    getVehiclesList(): Observable<any[]> {
-        return this.http.get<any>(this.APIUrl + 'vehicles');
-    }
-
-    getStarshipsList(): Observable<any[]> {
-        return this.http.get<any>(this.APIUrl + 'starships');
+    getAllMovies(): Observable<any[]> {
+        return this.http.get<any>(this.APIUrl + 'films');
     }
 }
